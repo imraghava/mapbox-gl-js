@@ -4,10 +4,12 @@
 
 const minTimeForMeasurement = 0.005 * 1000;
 
+/*::
 export type Measurement = {
     iterations: number,
     time: number
 };
+*/
 
 class Benchmark {
     constructor() {
@@ -109,7 +111,7 @@ class Benchmark {
         if (n === 1) {
             return bench;
         } else {
-            return bench.then(() => this._runAsync(n - 1))
+            return bench.then(() => this._runAsync(n - 1));
         }
     }
 
